@@ -1,2 +1,26 @@
-# TML
-Track My Love is a real-time location and communication app for couples and families. It allows users to share locations, view message logs, send in-app messages, and set trust-based access options. Built with Flutter and Firebase for Android.
+
+# Track My Love (TML) — Flutter + Firebase
+
+**Includes**
+- Firebase Email/Password + Phone auth
+- Google Sign-In
+- Firestore-ready
+- Android release config
+- Codemagic workflow
+
+## Firebase (required)
+1) Firebase Console → Create project.
+2) Add Android app with package **com.tml.app**.
+3) Download **google-services.json** and replace the placeholder at `android/app/google-services.json`.
+4) In **Authentication**: enable Email/Password, Phone, and Google.
+5) Rebuild.
+
+## Codemagic (recommended)
+- Connect repo → choose Flutter Android release.
+- Output: `build/app/outputs/flutter-apk/app-release.apk`.
+
+## Local
+```bash
+flutter pub get
+flutter build apk --release
+```
